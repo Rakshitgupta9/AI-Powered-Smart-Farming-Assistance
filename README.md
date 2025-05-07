@@ -72,6 +72,7 @@ Farming/
 │   └── signup.html
 ├── app.py
 ├── model_crop.pkl
+├── project.pptx
 ├── model.py
 └── notebooks/
     └── crop_prediction/
