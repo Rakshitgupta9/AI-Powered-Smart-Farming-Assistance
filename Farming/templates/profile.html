@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+  <section class="profile-content">
+    <br>
+    <center><h1>Your Profile</h1></center>
+
+    <div class="profile-card">
+      {% if user %}
+        <h3>{{ user.name }}</h3>
+        <p><strong>Age:</strong> {{ user.age }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>PIN Code:</strong> {{ user.pin_code }}</p>
+        <p><strong>Location:</strong> {{ user.location }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+      {% else %}
+        <p>No user data found.</p>
+      {% endif %}
+
+      <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+    </div>
+  </section>
+{% endblock %}

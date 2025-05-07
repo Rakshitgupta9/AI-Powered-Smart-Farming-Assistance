@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Help & Support{% endblock %}
+
+{% block content %}
+  <section class="contact-content">
+    <br>
+    <center><h1>Help & Support</h1></center>
+    <p class="description">
+      Welcome to the Help & Support page! If you need any assistance, feel free to reach out to any of our team members below.
+    </p>
+
+    <div class="team-grid">
+      
+      <!-- Team Member 1 -->
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/Rakshit.jpg') }}" alt="Rakshit Gupta" class="profile-pic">
+        <h3>Rakshit Gupta</h3>
+        <p>Email: <a href="mailto:2021a1r050@mietjammu.in">2021a1r050@mietjammu.in</a></p>
+        <p>7th CSE, MIET Jammu</p>
+        <a href="https://www.linkedin.com/in/rakshit9/" class="linkedin-link" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

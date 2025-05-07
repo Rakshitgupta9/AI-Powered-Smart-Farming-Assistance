@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Predict Page Styles - Only Affects Prediction Page */
+.predict-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  background: url("https://images.unsplash.com/photo-1511735643442-503bb3bd348a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNyb3BzfGVufDB8fDB8fHww");
+  background-position: center;
+  background-size: cover;
+}
+.navbar {
+
+  
+  top: 0;
+  width: 100%;
+  position: fixed;
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #4CAF50;
+  padding: 15px 20px;
+  text-align: center;
+}
+.navbar a { 
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px; }
+
+.footer { background: #222; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+
+
+
+.predict-container {
+  width: 100%;
+  max-width: 450px; /* Adjust width as needed */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Field Styling */
+.predict-container .form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.predict-container label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0a2752;
+}
+
+.predict-container input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  color: #32074e;
+}
+
+.predict-container input::placeholder {
+  color: rgba(129, 28, 28, 0.8);
+}
+
+/* Submit Button */
+.predict-container button {
+  background: #f39c12;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.predict-container button:hover {
+  background: #e67e22;
+}
+
+/* Prediction Result Box */
+.predict-container .alert {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #000000;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* Help */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 250px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.linkedin-link {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .team-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

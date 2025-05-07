@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #chatbox { width: 50%; margin: auto; border: 1px solid #ccc; padding: 10px; border-radius: 10px; }
+        #messages { height: 300px; overflow-y: scroll; border-bottom: 1px solid #ccc; padding: 10px; text-align: left; }
+        input { width: 75%; padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Farmer Chatbot 🌱</h2>
+    <p>Ask me anything about farming, crops, and agricultural tips.</p>
+    
+    <div id="chatbox">
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Ask me about farming..." onkeypress="if(event.keyCode==13) sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("userInput").value;
+            let messageBox = document.getElementById("messages");
+
+            messageBox.innerHTML += "<p><b>You:</b> " + userInput + "</p>";
+
+            fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                messageBox.innerHTML += "<p><b>Bot:</b> " + data.reply + "</p>";
+                messageBox.scrollTop = messageBox.scrollHeight;
+            });
+
+            document.getElementById("userInput").value = "";
+        }
+    </script>
+</body>
+</html>

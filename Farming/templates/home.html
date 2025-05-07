@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Smart Farming{% endblock %}
+
+{% block content %}
+<h2>Welcome to Smart Farming</h2>
+
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <div style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center;">
+        <h3>Crop Prediction</h3>
+        <p>Get AI-based crop recommendations.</p>
+        <form method="GET" action="{{ url_for('predict') }}">
+            <button type="submit">Go to Crop Prediction</button>
+        </form>
+    </div>
+
+    <div style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center;">
+        <h3>Soil Quality Prediction</h3>
+        <p>Analyze soil health and fertility.</p>
+        <a href="#">Check Soil Quality</a>
+    </div>
+
+    <div style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center;">
+        <h3>Disease Prediction</h3>
+        <p>Detect plant diseases and get treatment suggestions.</p>
+        <a href="#">Check for Diseases</a>
+    </div>
+
+    <div style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center;">
+        <h3>Chatbot</h3>
+        <p>Ask farming-related questions.</p>
+        <a href="#">Talk to AI</a>
+    </div>
+</div>
+{% endblock %}
