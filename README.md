@@ -1,5 +1,3 @@
-# AI-Powered-Smart-Farming-Assistance
-
 # 🌾 AI-Powered Smart Farming Assistance Portal
 
 ## 🔍 Problem Statement
@@ -85,3 +83,54 @@ Farming/
 
 * **SDG 8 – Decent Work and Economic Growth:** Increases productivity and financial outcomes for farmers using AI insights.
 * **SDG 9 – Industry, Innovation, and Infrastructure:** Promotes sustainable agriculture through cutting-edge technologies.
+
+
+---
+
+
+### 🚀 How to Run the App
+
+Follow these steps to set up and run your Flask app locally:
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+```
+
+2. **Create and Activate a Virtual Environment**
+
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
+
+3. **Install the Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Start MongoDB (if not already running)**
+   Make sure you have a MongoDB server running locally or remotely. Update your Mongo URI in `app.py` accordingly.
+
+5. **Run the Flask Application**
+
+```bash
+python app.py
+```
+
+6. **Access the Web App**
+   Open your browser and go to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+---
+   
+## Contact
+- **Name**: [Rakshit Gupta](https://github.com/Rakshitgupta9/)
+- **Email**: guptarakshit9858@gmail.com
+- **LinkedIn**: [Rakshit Gupta](https://www.linkedin.com/in/rakshit9/)
+
